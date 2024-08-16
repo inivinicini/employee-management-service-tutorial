@@ -20,9 +20,9 @@ public class EmployeeServiceImpl implements EmployeeService{
 
     @Override
     public Employee createEmployee(Employee employee) {
-        EmployeeEntity employeeEntity = new EmployeeEntity();
-        BeanUtils.copyProperties(employee, employeeEntity);
-        employeeRepository.save(employeeEntity);
+        EmployeeEntity employeeEntityObj = new EmployeeEntity();
+        BeanUtils.copyProperties(employee, employeeEntityObj);
+        employeeRepository.save(employeeEntityObj);
         return employee;
     }
 
